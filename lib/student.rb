@@ -84,7 +84,7 @@ class Student
     # self.new_from_db(s[0])
     s.map do |i|
       self.new_from_db(i)
-    end[0]
+    end
   end
 
   def save
