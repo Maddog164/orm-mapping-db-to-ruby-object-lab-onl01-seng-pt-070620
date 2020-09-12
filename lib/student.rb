@@ -72,11 +72,8 @@ class Student
       LIMIT 2
     SQL
 
-    i = 0
-    while i < num-1 do
-      binding.pry
-      self.new_from_db(DB[:conn].execute(sql)[i][0])
-      i+=1
+    DB[:conn].execute(sql).map do |row|
+      self.new_from_db(row)
     end
   end
 
