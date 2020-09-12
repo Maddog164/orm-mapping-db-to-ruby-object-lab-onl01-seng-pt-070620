@@ -87,7 +87,7 @@ class Student
     SQL
 
     #binding.pry
-    DB[:conn].execute(sql)[0]
+    DB[:conn].execute(sql)[0][0]
   end
 
   def save
