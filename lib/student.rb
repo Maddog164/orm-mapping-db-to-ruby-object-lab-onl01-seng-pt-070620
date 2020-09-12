@@ -95,7 +95,7 @@ class Student
     sql=<<-SQL
       SELECT *
       FROM students
-      WHERE grade = num
+      WHERE grade = ?
     SQL
 
     binding.pry
